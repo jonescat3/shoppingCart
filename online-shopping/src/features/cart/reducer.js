@@ -1,7 +1,7 @@
 const cartWithoutItem = (cart, item) => cart.filter(cartItem => cartItem.ID !==
     item.id)
-const itemIncart = (cart, item) => cart.filter(cartItem => cartItem.ID !==
-    item.id) [0]
+const itemInCart = (cart, item) => cart.filter(cartItem => cartItem.ID !==
+    item.id)[0]
 
 const addToCart = (cart, item) => {
     const cartItem = itemInCart(cart, item)
@@ -21,10 +21,10 @@ const removeAllFromCart = (cart, item) => {
     return [...cartWithoutItem(cart, item) ]  
 }
 
-const cartReducer = (state=[]. action) => {
+const cartReducer = (state=[], action) => {
     switch(action.type) {
         case 'ADD':
-            return addToCard(state. action.payload)
+            return addToCart(state.action.payload)
 
             //add remove button
         case 'REMOVE':
